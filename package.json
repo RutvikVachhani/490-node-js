@@ -1,6 +1,10 @@
 {
   "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "http": "^0.0.1-security",
     "mysql": "^2.18.1",
-    "pdf-parse": "^1.1.1"
+    "pdf-parse": "^1.1.1",
+    "pdfreader": "^1.2.12"
   }
 }

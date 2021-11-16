@@ -11,7 +11,6 @@ var mysql = require("mysql");
 const { end } = require("./db_connect");
 var db_connect = require("./db_connect");
 
-let dataBuffer = fs.readFileSync("./DRP/Rutvik.pdf");
 app.use(express.urlencoded({ extended: false }));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));

@@ -1,0 +1,8 @@
+To connect to MySQL database ust the follwoing credentials:
+connection name = COMP490
+host = 127.0.0.1
+username = COMP490
+password = 1234 
+database name = practice 
+
+and then you can create whatever table are necessary for you.

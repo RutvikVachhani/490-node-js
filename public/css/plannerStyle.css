@@ -1,4 +1,3 @@
-/*Border Box*/
 html {
     box-sizing: border-box;
   }
@@ -22,15 +21,43 @@ header {
     padding: 3.3%;
 }
 
+.table {
+    padding-top: 5px;
+}
+
 h2 {
     color:crimson;
 }
+
+/* left column */
 
 .years {
     border: solid;
     padding: 5%;
 }
 
+.years h1{
+    text-align: center;
+}
+
+.inProgress{
+    border: solid;
+    padding: 3%;
+    margin-top: 5%;
+    font-size: 20px;
+}
+
+.inProgress ul{
+    overflow:hidden;
+    overflow-y: scroll;
+    max-height: 150px;
+}
+
+.inProgress h1{
+    text-align: center;
+}
+
+/* right column */
 .recomended, .required {
     text-align: center;
     border: solid;

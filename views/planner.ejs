@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link href="css/plannerStyle.css" rel="stylesheet" type="text/css" />
+    <title>Planner</title>
+    <header>
+      <h1>CSUN</h1>
+    </header>
+  </head>
+
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <div class="row">
+      <div class="column">
+        <!--Left Column-->
+        <p>Expected Gradation Date:</p>
+        <hr />
+
+        <!--Here, a user will select a semester to set as their graduation date.-->
+
+        <!--Here, a user selects the year (Fall to Spring) they wish to plan.-->
+
+        <div class="years"></div>
+      </div>
+
+      <div class="column">
+        <!--Middle Column-->
+        <p>
+          This is the middle column, Here lies where the actual class schedule
+          building should take place.
+        </p>
+
+        <!--For the two semesters, the buttons and interactions need to be limited, until the user selects one.-->
+
+        <!--Fall semester-->
+        <div class="Fall">
+          <h3></h3>
+          <button type="button">+</button>
+        </div>
+
+        <hr />
+
+        <!--Spring semester-->
+        <h3></h3>
+        <div class="Spring">
+          <h3></h3>
+          <button type="button">+</button>
+        </div>
+      </div>
+
+      <div class="column">
+        <!--Right Column-->
+
+        <h2>Important!</h2>
+        <p>
+          In order to minimize your stay at CSUN, you must take the classes
+          indicated with the green circle <strong>this</strong> semester to
+          avoid the possibility of adding an additional semester to your degree
+          plan.
+        </p>
+        <p>Click on the "+" to drag and add classes.</p>
+        <p>Click on the "-" to delete a class from the semetser.</p>
+
+        <div class="recomended">
+          <h3>RECOMMENDED</h3>
+          <!--Classes highly recomended to students.-->
+        </div>
+
+        <div class="required">
+          <h3>REQUIRED</h3>
+          <!--Classes the student needs to take.-->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

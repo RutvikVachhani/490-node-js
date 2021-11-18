@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="pdfParse.js"></script>
+    <link href="css/uploadStyle.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="h.js"></script>
+    <script src="plannerJS.js" defer></script>
+    <header>
+      <h1>CSUN</h1>
+    </header>
+  </head>
+  <body>
+    <form action="/" method="POST" enctype="multipart/form-data">
+      <input type="file" name="file" id="file" hidden="hidden" />
+      <input type="submit" value="Upload" id="filesubmit" hidden="hidden" />
+    </form>
+    <div class="Upload">
+      <button type="button" id="custom-button">Upload</button>
+      <span id="custom-text">Choose a file</span>
+      <button type="button" id="custom-submit">submit</button>
+    </div>
+    <div class="Upload">
+      <button type="button" id="custom-view">View Planner</button>
+    </div>
+  </body>
+  <script type="text/javascript">
+    const realFilebutton = document.getElementById("file");
+    const customButton = document.getElementById("custom-button");
+    const realSubmitbutton = document.getElementById("filesubmit");
+    const customSubmitbutton = document.getElementById("custom-submit");
+    const customText = document.getElementById("custom-text");
+
+    customButton.addEventListener("click", function () {
+      realFilebutton.click();
+    });
+
+    customSubmitbutton.addEventListener("click", function () {
+      realSubmitbutton.click();
+    });
+
+    realFilebutton.addEventListener("change", function () {
+      if (realFilebutton.value) {
+        var val = realFilebutton.value;
+        var name = val.substr(val.lastIndexOf("\\") + 1);
+        customText.innerHTML = name;
+      } else {
+        customText.innerHTML = "No file chosen, yet.";
+      }
+    });
+  </script>
+  <script
+    src="https://code.jquery.com/jquery-2.2.1.min.js"
+    integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+    crossorigin="anonymous"
+  ></script>
+</html>

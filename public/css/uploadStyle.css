@@ -1,0 +1,37 @@
+/*Border Box*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+header {
+  padding-top: 1%;
+  padding-bottom: 1%;
+  width: 100%;
+  text-align: left;
+  background-color: crimson;
+  font-size: 24px;
+}
+
+.Upload,
+.Create {
+  padding-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+button {
+  background-color: crimson;
+  font-size: 24px;
+  padding: 10px;
+  border: 1px solid #000;
+  cursor: pointer;
+  margin: 10px;
+}

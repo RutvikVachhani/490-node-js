@@ -135,15 +135,15 @@ app.post("/", (req, res) => {
           }
           db_connect.end();
         });
-        res.render("planner");
+        res.redirect("/planner");
       }
     });
   }
 });
 
-// app.post("/submit", (req, res) => {
-//   res.render("submit");
-// });
+app.get("/planner", (req, res) => {
+  res.render("planner");
+});
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));

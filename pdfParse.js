@@ -14,14 +14,18 @@ var db_connect = require("./db_connect");
 app.use(express.urlencoded({ extended: false }));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
+app.use(express.static("public"));
+app.use("/css", express.static(__dirname + "public/css"));
 app.use(upload());
 
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("upload");
 });
 
 app.post("/", (req, res) => {
+  console.log("hello");
   if (req.files) {
+    console.log(req.files);
     var file = req.files.file;
     var filename = file.name;
     var location = "./DRP/" + filename;
@@ -30,7 +34,7 @@ app.post("/", (req, res) => {
       if (err) {
         res.send(err);
       } else {
-        res.send("File uploaded");
+        // res.send("File uploaded");
         pdf(location).then(function (data) {
           //All pdf content
           const pdf = data.text;
@@ -131,14 +135,15 @@ app.post("/", (req, res) => {
           }
           db_connect.end();
         });
+        res.render("planner");
       }
     });
   }
 });
 
-app.post("/submit", (req, res) => {
-  res.render("submit");
-});
+// app.post("/submit", (req, res) => {
+//   res.render("submit");
+// });
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));

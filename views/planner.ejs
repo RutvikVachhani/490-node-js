@@ -36,14 +36,12 @@
                 <div class= "inProgress">
                     <h1>In Progress</h1>
                     <ul>
-                        <li>COMP 490</li>
-                        <li>COMP 485</li>
-                        <li>COMP 484</li>
-                        <li>COMP 424</li>
-                        <li>COMP 440</li>
+                        <li>Dep.   | Course | Units</li>                        
+                    <% data.forEach(entry => { %>
+                        <li><%= entry.Department %>  <%= entry.CourseNumber %>        <%= entry.Credits %> </li>
+                    <% }) %>
                     </ul>
                 </div>
-
             </div>
 
             <div class="column">

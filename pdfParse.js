@@ -133,9 +133,13 @@ app.post("/", (req, res) => {
               console.log("1 record inserted");
             });
           }
-          db_connect.end();
+          let sqll = "SELECT Department, CourseNumber, Credits FROM practice.CourseCompletedByStudent WHERE StudentId = '" + StudentId + "' AND Grade = 'IP';";
+
+          db_connect.query(sqll, (err, result) => {
+              if(err) throw err;
+              res.render("planner", { data: result });
+          });
         });
-        res.render("planner");
       }
     });
   }

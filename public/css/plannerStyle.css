@@ -50,7 +50,7 @@ h2 {
 .inProgress ul{
     overflow:hidden;
     overflow-y: scroll;
-    max-height: 150px;
+    max-height: 250px;
 }
 
 .inProgress h1{

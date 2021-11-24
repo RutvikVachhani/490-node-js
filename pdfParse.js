@@ -5,6 +5,7 @@ const app = express();
 const http = require("http");
 const path = require("path");
 const upload = require("express-fileupload");
+//TESTING SUB BRANCH
 
 //Connect to database
 var mysql = require("mysql");
@@ -133,11 +134,14 @@ app.post("/", (req, res) => {
               console.log("1 record inserted");
             });
           }
-          let sqll = "SELECT Department, CourseNumber, Credits FROM practice.CourseCompletedByStudent WHERE StudentId = '" + StudentId + "' AND Grade = 'IP';";
+          let sqll =
+            "SELECT Department, CourseNumber, Credits FROM practice.CourseCompletedByStudent WHERE StudentId = '" +
+            StudentId +
+            "' AND Grade = 'IP';";
 
           db_connect.query(sqll, (err, result) => {
-              if(err) throw err;
-              res.render("planner", { data: result });
+            if (err) throw err;
+            res.render("planner", { data: result });
           });
         });
       }
